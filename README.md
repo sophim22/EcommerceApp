@@ -95,3 +95,6 @@ If you need to modify the database schema, you can create new migrations using t
 dotnet ef migrations add MigrationName
 dotnet ef database update
 ```
+## References
+
+[Visit ASP.NET Core Documentation](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?view=aspnetcore-8.0&tabs=visual-studio)
