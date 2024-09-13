@@ -41,6 +41,17 @@ The project uses SQLite as the database. The database configuration is set in th
 }
 ```
 
+Run this commands to install SqlServer packages:
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+```
+
+Command to install tool:
+```bash
+dotnet tool install --global dotnet-ef
+```
+
 This configuration specifies that SQLite will store the database in a file called EcommerceApp.db in the root folder of the project.
 
 ### 3. Apply Migrations
