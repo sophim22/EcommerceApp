@@ -143,6 +143,7 @@
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/EcommerceApp.MvcApplicationPartsAssemblyInfo.cache
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/EcommerceApp.RazorAssemblyInfo.cache
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/EcommerceApp.RazorAssemblyInfo.cs
+/Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/EcommerceApp.sourcelink.json
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/staticwebassets.build.json
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/staticwebassets.development.json
 /Users/realwat/Documents/AEU/Ecomerce/EcommerceApp/obj/Debug/net8.0/staticwebassets/msbuild.EcommerceApp.Microsoft.AspNetCore.StaticWebAssets.props

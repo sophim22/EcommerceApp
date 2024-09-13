@@ -1,42 +1,80 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>@ViewData["Title"] - EcommerceApp</title>
-    <link rel="stylesheet" href="~/css/site.css" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
-    <script
-        src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - EcommerceApp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
+	<script
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a asp-controller="About" asp-action="Index">About</a></li>
-                <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
-                <li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <a asp-controller="Account" asp-action="Logout">Logout</a>
-                    }
-                    else
-                    {
-                        <a asp-controller="Account" asp-action="Login">Login</a>
-                    }
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main role="main" class="container">
-        @RenderBody()
-    </main>
-    <footer>
-        <p>&copy; 2024 - EcommerceApp</p>
-    </footer>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" asp-controller="Home" asp-action="Index">EcommerceApp</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" asp-controller="Product" asp-action="Index">
+							<i class="fas fa-box"></i> Products
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" asp-controller="About" asp-action="Index">
+							<i class="fas fa-info-circle"></i> About
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" asp-controller="Contact" asp-action="Index">
+							<i class="fas fa-envelope"></i> Contact
+						</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					@if (User.Identity.IsAuthenticated)
+					{
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Account" asp-action="Logout">
+								<i class="fas fa-sign-out-alt"></i> Logout
+							</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Account" asp-action="Login">
+								<i class="fas fa-sign-in-alt"></i> Login
+							</a>
+						</li>
+					}
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main role="main" class="container mt-4">
+		@RenderBody()
+	</main>
+	<footer class="bg-light text-center py-3">
+		<p>&copy; @DateTime.Now.Year - EcommerceApp</p>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.6.0/dist/umd/popper.min.js"
+		integrity="sha384-Ksv+mrPpQ4eNSJpApluA2sdUUNbzqWfRgmHvlXlIE2A9G4eWgZ7Zz5hHryOg6O+c"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4Ag5tn5dUSNyL+xCXA4HhQZg6FrGJ0k=" crossorigin="anonymous"></script>
 </body>
 
 </html>
