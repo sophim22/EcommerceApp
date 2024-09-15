@@ -18,6 +18,14 @@ public class ContactController : Controller
     return View();
   }
 
+  [HttpPost]
+  public IActionResult Submit(string name, string email, string message)
+  {
+    // Process the form data (e.g., save to database, send email, etc.)
+    ViewBag.Message = "Thank you for contacting us!";
+    return View("Index");
+  }
+
   public IActionResult Privacy()
   {
     return View();

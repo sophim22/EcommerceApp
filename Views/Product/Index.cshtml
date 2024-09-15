@@ -20,7 +20,7 @@
           <td>@product.Id</td>
           <td>@product.Name</td>
           <td>@product.Description</td>
-          <td>@product.Price.ToString("C")</td>
+            <td>@product.Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-US"))</td>
           <td>
             <a href="@Url.Action("Details", "Product", new { id = product.Id })" class="btn btn-info btn-sm"><i
                 class="fas fa-eye"></i> View</a>
